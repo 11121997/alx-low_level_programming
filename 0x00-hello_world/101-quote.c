@@ -2,13 +2,12 @@
 /**
 *main-Entry point
 *
-*Description:"print a quote using write function"
-*fwrite(int fd. const void *buf.size_t count)
+*Description:"print a quote using scanf function"
+*
 *Return: 1 (not success)
 */
 int main(void)
 {
-char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
-fwrite(1, quo, 59);
+scanf("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 return (1);
 }
