@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -S -masm=Intel $CFILE -o out.s 
+gcc -S -masm=Intel $CFILE > out.c 
