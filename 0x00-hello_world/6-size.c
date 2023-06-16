@@ -4,7 +4,7 @@
 *
 *Description: Using sizeof to return size of various types.
 *
-*Return 0 (Success)
+*Return: Always 0 (Success)
 */
 int main(void)
 {
