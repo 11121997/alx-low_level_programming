@@ -15,9 +15,10 @@ while (n1 <= 9 && n2 <= 9)
 {
 putchar(n1 + '0');
 putchar(n2 + '0');
-if (n1 == n2 && n1 > n2)
 n1++;
 n2++;
+if (n1 == n2 && n1 > n2)
+break;
 if (n1 + n2 != 17)
 break;
 putchar(',');
