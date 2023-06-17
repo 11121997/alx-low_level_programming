@@ -15,7 +15,7 @@ while (n1 < 9)
 {
 while (n2 < 10)
 {
-if (n2 > n1 || n2 != n1)
+if (n2 > n1 || n1 != n2)
 {
 putchar(n1 + '0');
 putchar(n2 + '0');
