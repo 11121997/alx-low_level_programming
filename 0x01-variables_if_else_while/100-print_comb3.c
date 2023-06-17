@@ -10,9 +10,10 @@
 
 int main(void)
 {
-int n1 = 0, n2 = 0;
+int n1 = 0, n2;
 while (n1 <= 9)
 {
+n2 = 1;
 while (n2 <= 9)
 {
 if (n2 > n1 && n1 != n2)
