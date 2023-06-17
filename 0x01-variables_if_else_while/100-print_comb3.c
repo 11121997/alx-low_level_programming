@@ -23,7 +23,7 @@ putchar(n2 + 48);
 }
 if (n1 + n2 != 17)
 {
-break;
+continue;
 }
 {
 putchar(',');
