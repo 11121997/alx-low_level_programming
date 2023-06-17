@@ -17,11 +17,13 @@ n2 = 1;
 while (n2 <= 9)
 {
 if (n2 > n1 && n1 != n2)
+break;
 {
 putchar(n1 + 48);
 putchar(n2 + 48);
 }
 if (n1 + n2 != 17)
+break;
 {
 putchar(',');
 putchar(' ');
