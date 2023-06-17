@@ -10,26 +10,24 @@
 
 int main(void)
 {
-int n = 0, n1 = 1;
-while (n <= 8)
+int n1 = 0, n2 = 1;
+while (n1 < 9)
 {
-while (n1 <= 9)
+while (n2 < 10)
 {
-if (n1 > n)
+if (n2 > n1 || n2 != n1)
 {
-putchar(n + '0');
-	putchar(n + '0');
-if (n + n1 != 17)
-{
-break;
-}
-}
-}
+putchar(n1 + '0');
+putchar(n2 + '0');
+n1++;
+n2++;
 }
 putchar(',');
 putchar(' ');
-n++;
-n1++;
+if (n1 + n2 != 17)
+break;
+}
+}
 putchar('\n');
 return (0);
 }
