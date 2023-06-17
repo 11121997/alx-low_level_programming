@@ -18,7 +18,7 @@ putchar(',');
 putchar(' ');
 n++;
 }
-putchar('\n');
+putchar(',');
 return (0);
 }
 
