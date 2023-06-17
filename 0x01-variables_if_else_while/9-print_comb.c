@@ -11,14 +11,14 @@
 int main(void)
 {
 int n = 0;
-while (n < 10)
+while (n < 9)
 {
 putchar(n + '0');
 putchar(',');
 putchar(' ');
 n++;
 }
-putchar(',');
+putchar('9'+'0');
 return (0);
 }
 
