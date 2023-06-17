@@ -19,14 +19,14 @@ if (n2 > n1 || n1 != n2)
 {
 putchar(n1 + '0');
 putchar(n2 + '0');
-n1++;
-n2++;
 }
-putchar(',');
-putchar(' ');
 if (n1 + n2 != 17)
 break;
+putchar(',');
+putchar(' ');
+n2++;
 }
+n1++;
 }
 putchar('\n');
 return (0);
