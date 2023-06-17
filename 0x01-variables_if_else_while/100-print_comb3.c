@@ -21,9 +21,9 @@ if (n1 == n2 && n1 > n2)
 break;
 if (n1 + n2 != 17)
 break;
+}
 putchar(',');
 putchar(' ');
-}
 putchar('\n');
 return (0);
 }
