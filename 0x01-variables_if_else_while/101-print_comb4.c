@@ -11,10 +11,10 @@
 int main(void)
 {
 int n1 = 0, n2, n3;
-while (n1 <= 7)
+while (n1 <= 9)
 {
 n2 = 0;
-while (n2 <= 8)
+while (n2 <= 9)
 {
 n3 = 0;
 while (n3 <= 9)
