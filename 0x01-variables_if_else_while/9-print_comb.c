@@ -18,7 +18,7 @@ putchar(',');
 putchar(' ');
 n++;
 }
-putchar('9'+'0');
+putchar('9');
 return (0);
 }
 
