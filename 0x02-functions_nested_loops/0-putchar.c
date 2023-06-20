@@ -10,6 +10,6 @@
 
 int main(void)
 {
-ptintf("_putchar\n");
+printf("_putchar\n");
 return (0);
 }
