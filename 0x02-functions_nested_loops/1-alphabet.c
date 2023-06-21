@@ -1,19 +1,15 @@
 #include "main.h"
 
 /**
-*main-Entry point
+*print_alphabet - make the alphabet
 *
-*Description: A C program to print alphabets wit _putchar functionj
-*
-*Return: Always 0 (success)
+*Return: void
 */
-int main(void)
-{
-void print_alphabet(void);
 
-int ch;
+void print_alphabet(void)
+{
+char ch;
 for (ch = 'a'; ch <= 'z'; ch++)
 _putchar(ch);
 _putchar('\n');
-return (0);
 }
