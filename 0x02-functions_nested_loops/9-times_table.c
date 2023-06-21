@@ -10,16 +10,19 @@ int x, y, z;
 for (x = 0; x <= 9; x++)
 {
 _putchar(0 + '0');
+_putchar(',');
 for (y = 0; y <= 9; y++)
 {
-_putchar(',');
-_putchar(' ');
+_putchar(y + '0');
+_putchar(y + '0');
 z = x * y;
-if (x <= 9)
-_putchar(' ');
-else
+if (z <= 9)
+{
+_putchar(',');
+-putchar(' ');
+else 
 _putchar((z / 10) + '0');
-_putchar((z % 10) + '0');
+_putachr((z % 10) + '0');
 }
 _putchar('\n');
 }
