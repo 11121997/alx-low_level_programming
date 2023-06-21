@@ -14,16 +14,17 @@ _putchar(',');
 for (y = 0; y <= 9; y++)
 {
 _putchar(y + '0');
-_putchar(y + '0');
+_putchar(',');
 z = x * y;
 if (z <= 9)
 {
 _putchar(',');
--putchar(' ');
-else 
-_putchar((z / 10) + '0');
-_putachr((z % 10) + '0');
+_putchar(' ');
 }
+else
+_putchar((z / 10) + '0');
+_putchar((z % 10) + '0');
 _putchar('\n');
+}
 }
 }
