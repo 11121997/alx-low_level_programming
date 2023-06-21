@@ -10,10 +10,10 @@ int x, y, z;
 if (n <= 15 && n >= 0)
 {
 for (x = 0; x <= n; n++)
-{
+
 _putchar(0 + '0');
 for (y = 1; y <= n; y++)
-{
+
 _putchar(',');
 _putchar(' ');
 z = x * y;
@@ -29,8 +29,7 @@ _putchar((z / 10) % 10 + '0');
 else if (z <= 99 && z >= 10)
 _putchar((z / 10) + '0');
 _putchar((z % 10) + '0');
-}
+
 _putchar('\n');
-}
 }
 }
