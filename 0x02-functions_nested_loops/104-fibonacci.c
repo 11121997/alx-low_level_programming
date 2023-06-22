@@ -1,46 +1,40 @@
 #include <stdio.h>
-
+#define LARGEST 10000000000
 /**
 *main - Entry point
 *
-*Description: prints the first 98 Fibonacci numbers
+*Description: program that finds and prints the first 98 Fibonacci numbers
 *
 *Return: Always 0 (success)
 */
-
 int main(void)
 {
 int n;
-long x = 0, y = 1, sum;
-long hx, fx, hy, fy;
-long h1, h2;
-for (n = 0; n < 92; n++)
+unsigned long int f1 = 0, b1 = 1, f2 = 0, b2 = 2;
+unsigned long int sum1, sum2, sum3;
+printf("%lu%lu", b1, b2);
+for (n = 2; n < 98; n++)
 {
-sum = x + y;
-printf("%ld", sum);
-x = y;
-y = sum;
+if (b1 + b2 > LARGEST || f2 > 0 || f1 > 0)
+{
+sum1 = (b1 + b2) / LARGEST;
+sum2 = (b1 + b2) % LARGEST;
+sum3 = f1 + f2 + sum1;
+f1 = f2;
+f2 = sum3;
+b1 = b2;
+b2 = sum2;
+printf("%lu%010lu", f2, b2);
 }
-hx = x / 10000000000;
-hy = y / 10000000000;
-fx = x % 10000000000;
-fy = y % 10000000000;
-for (n = 93; n < 99; n++)
+else
 {
-h1 = hx + hy;
-h2 = fx + fy;
-if (fx + fy > 9999999999)
-{
-h1 += 1;
-h2 %= 10000000000;
+sum2 = b1 + b2;
+b1 = b2;
+b2 = sum2;
+printf("%lu", b2);
 }
-printf("%ld%ld", h1, h2);
 if (n != 98)
 printf(", ");
-hx = hy;
-fx = fy;
-hy = h1;
-fy = h2;
 }
 printf("\n");
 return (0);
