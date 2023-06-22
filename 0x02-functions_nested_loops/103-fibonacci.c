@@ -10,7 +10,8 @@
 
 int main(void)
 {
-long x, y, sum, total;
+long x, y, sum;
+float total;
 while (1)
 {
 sum = x + y;
@@ -21,6 +22,6 @@ total += sum;
 x = y;
 y = sum;
 }
-printf("%ld\n", total);
+printf("%.0f\n", total);
 return (0);
 }
