@@ -12,13 +12,13 @@ int main(void)
 {
 int n;
 long x = 0, y = 1, sum;
-for (n = 0; n < 98; n++)
+for (n = 0; n < 94; n++)
 {
 sum = x + y;
 printf("%ld", sum);
 x = y;
 y = sum;
-if (sum == 97)
+if (sum == 93)
 {
 printf("\n");
 }
