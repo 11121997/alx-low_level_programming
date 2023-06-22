@@ -16,6 +16,8 @@ for (n = 0; n < 98; n++)
 {
 sum = x + y;
 printf("%ld", sum);
+x = y;
+y = sum;
 if (sum == 98)
 {
 printf("\n");
