@@ -10,7 +10,7 @@
 int main(void)
 {
 int n;
-long x = 1, y = 2, sum;
+long x = 0, y = 1, sum;
 for (n = 0; n < 50; n++)
 {
 sum = x + y;
