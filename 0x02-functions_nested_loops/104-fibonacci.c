@@ -18,7 +18,7 @@ sum = x + y;
 printf("%ld", sum);
 x = y;
 y = sum;
-if (sum =! 97)
+if (sum != 97)
 {
 printf("\n");
 }
