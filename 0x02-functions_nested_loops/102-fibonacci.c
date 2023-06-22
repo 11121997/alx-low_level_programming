@@ -9,13 +9,20 @@
 
 int main(void)
 {
-int x, y, z, n;
-for (x = 1; x <= 50; x++)
+int n;
+long x = 1, y = 2, sum;
+for (n = 0; n < 50; n++)
 {
-for (y = 2; y <= 50; y++)
-z = x + y;
-n = z + x;
+sum = x + y;
+printf("%ld", sum);
+x = y;
+y = sum;
+if (n == 49)
+{
+	printf("\n");
 }
-printf("%d, \n", n);
+else
+printf(", ");
+}
 return (0);
 }
