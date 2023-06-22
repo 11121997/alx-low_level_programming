@@ -27,20 +27,20 @@ fx = x % 10000000000;
 fy = y % 10000000000;
 for (n = 93; n < 99; n++)
 {
-	h1 = hx + hy;
-		h2 = fx + fy;
-		if (fx + fy > 9999999999)
-		{
-			h1 += 1;
-			h2 %= 10000000000;
-		}
-		printf("%ld%ld", h1, h2);
-		if (n != 98)
-			printf(", ");
-		hx = hy;
-		fx = fy;
-		hy = h1;
-		fy =h2;
+h1 = hx + hy;
+h2 = fx + fy;
+if (fx + fy > 9999999999)
+{
+h1 += 1;
+h2 %= 10000000000;
+}
+printf("%ld%ld", h1, h2);
+if (n != 98)
+printf(", ");
+hx = hy;
+fx = fy;
+hy = h1;
+fy = h2;
 }
 printf("\n");
 return (0);
