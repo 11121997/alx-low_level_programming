@@ -5,11 +5,10 @@
 *@a: character take an integer number
 *@b: character take an integer number
 *
-*Return: Always 0 (success)
+*Return: a* b
 */
 
 int mul(int a, int b)
 {
-	printf("%d", a * b);
-	return (0);
+	return (a * b);
 }
