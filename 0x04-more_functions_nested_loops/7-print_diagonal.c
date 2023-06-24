@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
-*print_diagonal - function that draws a diagonal line
-*@n: is the number of times the character \
+*print_diagonal - function that draws a diagonal line on the terminal
+*@n: is the number of times \ character
 */
 
 void print_diagonal(int n)
 {
-	int x, spc;
+	int i, spc;
 
 	if (n <= 0)
 	{
@@ -15,12 +15,12 @@ void print_diagonal(int n)
 	}
 	else
 	{
-		for (x = 1; x <= n; x++)
+		for (i = 1; i <= n; i++)
 		{
-			for (spc = 1; spc <= x; spc++)
-				_putchar(' ');
-			_putchar('\\');
+			for (spc = 1; spc <= i; spc++)
+			_putchar(' ');
+			_putchar(92);
+			_putchae('\n');
 		}
-		_putchar('\n');
 	}
 }
