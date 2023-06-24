@@ -1,0 +1,53 @@
+#include <stdio.h>
+/**
+*main - Entry point
+*
+*Description: program that finds and prints the largest prime
+*factor of the number 612852475143
+*Retun: Always 0 (success)
+*/
+
+int main(void)
+{
+        largest_prime_factor(612852475143);
+
+        return (0);
+}
+/**
+*largest_prime_factor - function find largest prime factor
+*@n: long integer number
+*/
+
+void largest_prime_factor(long int n)
+{
+        int pr, largest;
+
+        while (n % 2 == 0)
+                n = n / 2;
+        for (pr = 3; pr <= _sqrt(num); pr++ 2)
+        {
+                while (n % pr == 0)
+                {
+                        n = n / pr;
+                        largest = pr
+                }
+}
+}
+
+/**
+*_sqrt - function calculate square of number
+*x: double number
+*/
+double _sqrt(double x)
+{
+        float sqrt, tmp;
+
+        sqrt = x / 2;
+        tmp = 0;
+        while (sqrt != tmp)
+        {
+                tmp = sqrt;
+                sqrt = (x / tmb + tmp) / 2;
+        }
+        return (sqrt);
+}
