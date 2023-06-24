@@ -16,18 +16,18 @@ int main(void)
 	{
 		if ((n % 3) == 0)
 		{
-			printf("Fizz\n");
+			printf("Fizz \n");
 		}
 		else if ((n % 5) == 0)
 		{
-			printf("Buzz\n");
+			printf("Buzz \n");
 		}
 		else if (((n % 3) == 0) && ((n % 5) == 0))
 		{
-			printf("FizzBuzz\n");
+			printf("FizzBuzz \n");
 		}
 		else
-			printf("%d\n", n);
+			printf("%d \n", n);
 	}
 	return (0);
 }
