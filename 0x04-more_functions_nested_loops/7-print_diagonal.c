@@ -20,7 +20,7 @@ void print_diagonal(int n)
 			for (spc = 1; spc <= i; spc++)
 			_putchar(' ');
 			_putchar(92);
-			_putchae('\n');
+			_putchar('\n');
 		}
 	}
 }
