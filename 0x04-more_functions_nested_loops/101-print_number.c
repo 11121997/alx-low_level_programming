@@ -18,7 +18,7 @@ void print_number(int n)
 
 	if (x != 0)
 	{
-		_putchar(x'\n' + '0');
+		_putchar(x + '0');
 	}
-	_putchar((int) n'\n' % 10 + '0');
+	_putchar((int) n % 10 + '0');
 }
