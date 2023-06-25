@@ -6,20 +6,14 @@
 
 void print_number(int n)
 {
-	unsigned int x = n;
+	unsigned int num = n;
 
 	if (n < 0)
 	{
-		n = -n;
-		x = n;
 		_putchar('-');
+		num = -num;
 	}
-	x /= 10;
-
-	if (x != 0)
-	{
-		_putchar(x + '0');
-	}
-	_putchar((int) n % 10 + '0');
-	_putchar('\n');
+	if ((num / 10) > 0)
+		_print_number(num / 10);
+	_putchar((num % 10) + '0');
 }
