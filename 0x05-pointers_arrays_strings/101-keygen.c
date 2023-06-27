@@ -18,6 +18,6 @@ int main(void)
 		sum += c;
 		putchar(c);
 	}
-	putchar(2772 - sum);
+	putchar(sum - 2772);
 	return (0);
 }
