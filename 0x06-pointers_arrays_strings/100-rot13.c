@@ -2,7 +2,7 @@
 /**
 **rot13 - function that encodes a string using rot13
 *@c: array of characters
-*Return: c
+*Return: ptr
 */
 
 char *rot13(char *c)
@@ -10,6 +10,7 @@ char *rot13(char *c)
 	int i;
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char ROT13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char *ptr = c;
 
 	while (*c)
 	{
@@ -23,5 +24,5 @@ char *rot13(char *c)
 		}
 		c++;
 	}
-	return (c);
+	return (ptr);
 }
