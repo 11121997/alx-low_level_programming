@@ -18,6 +18,7 @@ char *rot13(char *c)
 			if (*c == rot13[i])
 			{
 				*c = ROT13[i];
+				break;
 			}
 		}
 		c++;
