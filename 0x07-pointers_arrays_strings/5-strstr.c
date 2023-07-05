@@ -20,7 +20,7 @@ char *_strstr(char *haystack, char *needle)
 		{
 			if (needle[j] == haystack[i])
 			{
-				p = $needle[j];
+				p = needle[j];
 				return (p);
 			}
 			j++;
