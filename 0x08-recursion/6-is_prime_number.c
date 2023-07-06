@@ -1,30 +1,34 @@
 #include "main.h"
+#include <stdio.h>
+
 /**
 *is_prime_number - function that checks is n prime
 *@n: int
-*@othern: int
-*Return: int
+*@i: int
+*Return: int value
 */
 
-int check_prime(int n, int othern);
+int check_prime(int n, int i);
 int is_prime_number(int n)
 {
-	return (check_prime(n, 2));
+	return (check_prime(n, 1));
 }
 
 /**
 *check_prime - function check if number is prime or not
 *@n: int
-*@othern: int
-*Return: int
+*@i: int
+*Return: 1 for prime or 0 otherwise
 */
 
-int check_prime(int n, int othern)
+int check_prime(int n, int i)
 {
-	if (othern >= n && n > 1)
-		return (1);
-	else if (n % othern == 0 || n < 1)
+	if (n <= 1)
 		return (0);
-	else
-		return (check_prime(n, othern));
+	if (n % i == 0 && i > 1)
+		return (0);
+	if ((n / i) < i)
+		return (1);
+
+	return (check_prime(n, i + 1));
 }
