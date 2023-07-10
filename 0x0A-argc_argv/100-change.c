@@ -24,10 +24,6 @@ int main(int argc, char *argv[])
 			{
 				break;
 			}
-			if (money < 0)
-			{
-				printf("%d\n", '0');
-			}
 		}
 	}
 	printf("%d\n", leastcents);
