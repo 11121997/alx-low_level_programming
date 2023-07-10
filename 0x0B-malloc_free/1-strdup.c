@@ -13,19 +13,18 @@ char *_strdup(char *str)
 	char *ptr;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
+
 	for (; str[size] != '\0'; size++)
-	{
 		ptr = malloc(size * sizeof(str) + 1);
-	}
+
 	if (ptr == 0)
-	{
 		return (NULL);
-	}
+
 	else
+	{
 		for (; i < size; i++)
 			ptr[i] = str[i];
+	}
 	return (ptr);
 }
