@@ -23,12 +23,16 @@ int main(int argc, char *argv[])
 			if (money % cents[i] == 0)
 			{
 				break;
-				}
+			}
+			if (money < 0)
+			{
+				printf("%d\n", '0');
+			}
 		}
 	}
 	printf("%d\n", leastcents);
 	}
-	else if (argc < 1)
+	else
 	{
 		printf("Error\n");
 		return (1);
