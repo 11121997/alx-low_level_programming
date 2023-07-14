@@ -1,10 +1,10 @@
 #include "main.h"
 /**
 **_memset - fills memory with a bytes
-*@s: string array
+*@s: pointer
 *@b: character
 *@n: int
-*Return: ptr
+*Return: s
 */
 
 char *_memset(char *s, char b, unsigned int n)
