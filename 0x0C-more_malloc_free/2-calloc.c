@@ -1,39 +1,29 @@
 #include "main.h"
-/**
-**_memset - fills memory with a bytes
-*@s: pointer
-*@b: character
-*@n: int
-*Return: s
-*/
 
-char *_memset(char *s, char b, unsigned int n)
-{
-	char *ptr = s;
-
-	while (n--)
-		*s++ = b;
-	return (ptr);
-}
 /**
 **_calloc - function that allocates memory for an array
-*@nmemb: array length
-*@size: number of bytes
+*@nmemb: number of members
+*@size: size bytes
 *Return: m
 */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	void *m;
+	int i = 0, l = 0;
+	char *m;
 
-	if (size == 0 || nmemb == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	m = malloc(sizeof(int) * nmemb);
-	if (m == 0)
+	l = nmemb * size;
+	m = malloc(l);
+	if (m == NULL)
 		return (NULL);
 
-	_memset(m, 0, sizeof(int) * nmemb);
-
+	while (i < l)
+	{
+		m[i] = 0;
+		i++;
+	}
 	return (m);
 }
