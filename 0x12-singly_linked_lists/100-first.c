@@ -1,12 +1,12 @@
 #include "lists.h"
 
-void main_constructor(void) __attribute__((constructor));
+void _constructor(void) __attribute__((constructor));
 
 /**
-*main_constructor - constructor function
+*_constructor - constructor function
 */
-void main_constructor(void)
+void _constructor(void)
 {
-	printf("You're beat! and yet, you must allow,\n");
-	printf("I bore my house upon my back!\n);
+	printf("You're beat! and yet, you must allow,\n"
+			"I bore my house upon my back!\n");
 }
