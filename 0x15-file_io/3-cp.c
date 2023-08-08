@@ -31,10 +31,13 @@ int main(int ac, char **av)
 			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
 	if (b == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
+
 	from_fd = close(from_fd);
+	to_fd = close(to_fd);
 	if (from_fd)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, from_fd), exit(100);
 	if (to_fd)
 		dprintf(STDERR_FILENO, ERR_NOCLOSE, to_fd), exit(100);
+
 	return (EXIT_SUCCESS);
 }
