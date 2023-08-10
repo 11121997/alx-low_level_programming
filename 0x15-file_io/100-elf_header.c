@@ -16,7 +16,7 @@ void close_elf(int elf);
 
 /**
  *check_elf - function that check elf file
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: pointer to an array that containing ELF magic numbers
  */
 void check_elf(unsigned char *e_ident)
 {
@@ -37,7 +37,7 @@ void check_elf(unsigned char *e_ident)
 
 /**
  *print_magic - function that print magic numbers
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: pointer to an array that containing ELF magic numbers
  */
 void print_magic(unsigned char *e_ident)
 {
@@ -58,7 +58,7 @@ void print_magic(unsigned char *e_ident)
 
 /**
  *print_class - prints the class of an ELF header
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: pointer to an array that containing ELF magic numbers
  */
 void print_class(unsigned char *e_ident)
 {
@@ -82,7 +82,7 @@ void print_class(unsigned char *e_ident)
 
 /**
  *print_data - function that print data in ELF header
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: pointer to an array that containing ELF magic numbers
  */
 void print_data(unsigned char *e_ident)
 {
@@ -106,7 +106,7 @@ void print_data(unsigned char *e_ident)
 
 /**
  *print_version - function that print version of ELF header
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: pointer to an array that containing ELF magic numbers
  */
 void print_version(unsigned char *e_ident)
 {
@@ -126,7 +126,7 @@ void print_version(unsigned char *e_ident)
 
 /**
  *print_osabi - function that print OS/ABI of ELF header
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: pointer to an array that containing ELF magic numbers
  */
 void print_osabi(unsigned char *e_ident)
 {
@@ -170,7 +170,7 @@ void print_osabi(unsigned char *e_ident)
 }
 /**
  *print_abi - function that print abi of ELF header
- *@e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: A pointer to an array containing the ELF ABI version
  */
 void print_abi(unsigned char *e_ident)
 {
@@ -180,7 +180,7 @@ void print_abi(unsigned char *e_ident)
 
 /**
  *print_type - function that print type of ELF header
- *@*e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: A pointer to an array containing the ELF ABI version
  *@e_type: The ELF type
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
@@ -214,7 +214,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 
 /**
  *print_entry - function that print entry point of ELF header
- *@*e_ident: pointer to an array that comtaining ELF magic numbers
+ *@e_ident: A pointer to an array containing the ELF ABI version
  *@e_entry: The address of the ELF entry point
  */
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
@@ -237,6 +237,8 @@ void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 /**
  *close_elf - function that close ELF header
  *@elf: The file descriptor of the ELF file
+ *
+ *Description: If the file cannot be closed - exit code 98.
  */
 void close_elf(int elf)
 {
@@ -249,10 +251,15 @@ void close_elf(int elf)
 }
 
 /**
- *main: Entry point
+ *main:program that displays the information contained in the ELF header
+ *
+ *Description:If the file is not an ELF File
+ *or the function fails - exit code 98.
+ *
  *@argc: argument counter
  *@argv: array of pointers to the argument
- *Return: 0
+ *
+ *Return: 0 always success
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
 {
@@ -295,4 +302,3 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	close_elf(o);
 	return (0);
 }
-
