@@ -101,7 +101,7 @@ void print_data(unsigned char *e_ident)
 		printf("2's complement, big endian\n");
 		break;
 	default:
-		printf("<unknown: %x>\n", e_ident[EI_DATA]);
+		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
 
@@ -281,7 +281,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	}
 
 	check_elf(header->e_ident);
-	printf("ELF HEADER:\n");
+	printf("ELF Header:\n");
 	print_magic(header->e_ident);
 	print_class(header->e_ident);
 	print_data(header->e_ident);
