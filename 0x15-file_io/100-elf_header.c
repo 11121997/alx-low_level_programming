@@ -182,6 +182,7 @@ void print_abi(unsigned char *e_ident)
 
 /**
  * print_type - print type of an ELF header
+ * @e_type: type of an ELF file
  * @e_ident: pointer to array containing ELF version
  */
 void print_type(unsigned int e_type, unsigned char *e_ident)
