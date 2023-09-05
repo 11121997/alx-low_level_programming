@@ -17,7 +17,7 @@ void close_elf(int elf);
 /**
  * check_elf - check if the file is an ELF file
  * @e_ident: pointer to array containing ELF magic numbers
- */ 
+ */
 void check_elf(unsigned char *e_ident)
 {
 	int i;
@@ -134,7 +134,7 @@ void print_osabi(unsigned char *e_ident)
 	printf("  OS/ABI:                            ");
 
 	switch (e_ident[EI_OSABI])
-	{	
+	{
 	case ELFOSABI_NONE:
 		printf("UNIX - System V\n");
 		break;
@@ -220,7 +220,7 @@ void print_type(unsigned int e_type, unsigned char *e_ident)
 void print_entry(unsigned long int e_entry, unsigned char *e_ident)
 {
 	printf("  Entry point address:               ");
-	
+
 	if (e_ident[EI_DATA] == ELFDATA2MSB)
 	{
 		e_entry = ((e_entry << 8) & 0xFF00FF00) |
@@ -250,7 +250,7 @@ void close_elf(int elf)
 /**
  * main - Displays information contained in ELF header
  * @argc: number of arguments
- * @argv: array of pointers 
+ * @argv: array of pointers
  * Return: 0 on success
  */
 int main(int __attribute__((__unused__)) argc, char *argv[])
